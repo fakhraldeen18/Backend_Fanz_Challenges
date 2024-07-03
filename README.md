@@ -57,3 +57,15 @@ You are given an array of integers. Write a PHP function that finds the maximum 
 **Answer:**
 
 The time complexity of my solution is O(numberOfElements) because we iterate once a time in the array to find the minimum and maximum.
+
+### Challenge 4: Decimal to Binary Conversion    
+**Question:** 
+
+Implement a PHP function that converts a given decimal number into its binary representation using bitwise operators. Explain the bitwise operations used in your code. 
+
+**Bitwise Operations:**
+
+**(% Modulus Operator):** It calculates the remainder of the decimal number divided by 2 I use the modulus operator in line (5) to get the least bit of the decimal number.
+**(>>= Right Shift Operator):** It used to shift the bits to the left of the first operand by the number of positions.
+I used to shift the decimal number right by 1 position in line (6).
+
