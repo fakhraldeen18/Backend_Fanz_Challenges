@@ -66,6 +66,7 @@ Implement a PHP function that converts a given decimal number into its binary re
 **Bitwise Operations:**
 
 **(% Modulus Operator):** It calculates the remainder of the decimal number divided by 2 I use the modulus operator in line (5) to get the least bit of the decimal number.
+
 **(>>= Right Shift Operator):** It used to shift the bits to the left of the first operand by the number of positions.
 I used to shift the decimal number right by 1 position in line (6).
 
@@ -78,3 +79,35 @@ Create a PHP function (Laravel way) that generates a Fibonacci sequence of a spe
 **Answer:** 
 
 When generating a Fibonacci sequence, iteration is usually more efficient than recursion because of the overhead that recursion introduces, and for large lengths may result in excessive function calls and slower performance.
+
+### Challenge 5: Find Prime Numbers in a Range   
+**Question:**
+
+ Create a PHP function that finds all prime numbers in a given range and displays them. 
+
+
+ function PrimeNumbers($start, $end) {
+  $primeNumbers = [];
+
+  for ($number = $start; $number <= $end; $number++) {
+    $isPrime = true;
+
+    if ($number <= 1) {
+      $isPrime = false;
+    }
+    
+    for ($i = 2; $i <= sqrt($number); $i++) {
+      if ($number % $i == 0) {
+        $isPrime = false;
+        break;
+      }
+    }
+
+    if ($isPrime) {
+      $primeNumbers[] = $number;
+    }
+  }
+
+  return $primeNumbers;
+}
+
