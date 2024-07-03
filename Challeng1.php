@@ -33,13 +33,18 @@ class Car extends vehicle{
     }
 }
 
+/*
+In this example, each subclass like Car and 
+Airplane must implement the drive() method as they drive differently but can inherit the startEngine() method.
+So, the abstract classes are more grateful when we have related classes, 
+whereas the interface is best suited for defining contracts where multiple unrelated classes need to implement the same methods.
+*/
+
 echo"Challenge 1\n";
-echo"============================================== \n";
 $car = new Car();
 $car->drive();
 
 $plane = new Airplane();
 $plane->startEngine();
 $plane->drive();
-echo"==============================================";
 ?>
