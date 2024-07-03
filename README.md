@@ -47,3 +47,13 @@ You could have an abstract class Vehicle which provides some common methods that
         return $num* Factorial($num -1); // Recursive call to calculate the factorial of the given number.
     }
 } 
+
+
+### Challenge 3: Find Max and Min in Array   
+**Question:** 
+
+You are given an array of integers. Write a PHP function that finds the maximum and minimum values in the array. Explain the time complexity of your solution.
+
+**Answer:**
+
+The time complexity of my solution is O(numberOfElements) because we iterate once a time in the array to find the minimum and maximum.
