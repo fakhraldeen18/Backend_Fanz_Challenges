@@ -69,3 +69,12 @@ Implement a PHP function that converts a given decimal number into its binary re
 **(>>= Right Shift Operator):** It used to shift the bits to the left of the first operand by the number of positions.
 I used to shift the decimal number right by 1 position in line (6).
 
+
+### Challenge 5: Fibonacci Sequence (Laravel Way)  
+**Question:** 
+
+Create a PHP function (Laravel way) that generates a Fibonacci sequence of a specified length. Explain whether you would use recursion or iteration for this task, and provide your implementation. 
+
+**Answer:** 
+
+When generating a Fibonacci sequence, iteration is usually more efficient than recursion because of the overhead that recursion introduces, and for large lengths may result in excessive function calls and slower performance.
