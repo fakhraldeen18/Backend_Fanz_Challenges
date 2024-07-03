@@ -33,20 +33,20 @@ You could have an abstract class Vehicle which provides some common methods that
 
  **Answer:**
 
- function Factorial($num)
-{
-    if ($num < 0){
-        echo "Error: Negative numbers are not allowed.";  // If the number is negative, display an error message
-        return; // Exit the function
-    }
-    elseif($num === 0){
-        return 1; // Base case: if the number is 0, return 1 because the factorial of 0 is 1.
-    }
-    else
+    function Factorial($num)
     {
-        return $num* Factorial($num -1); // Recursive call to calculate the factorial of the given number.
-    }
-} 
+        if ($num < 0){
+            echo "Error: Negative numbers are not allowed.";  // If the number is negative, display an error message
+            return; // Exit the function
+        }
+        elseif($num === 0){
+            return 1; // Base case: if the number is 0, return 1 because the factorial of 0 is 1.
+        }
+        else
+        {
+            return $num* Factorial($num -1); // Recursive call to calculate the factorial of the given number.
+        }
+    } 
 
 
 ### Challenge 3: Find Max and Min in Array   
@@ -80,17 +80,17 @@ Create a PHP function (Laravel way) that generates a Fibonacci sequence of a spe
 
 When generating a Fibonacci sequence, iteration is usually more efficient than recursion because of the overhead that recursion introduces, and for large lengths may result in excessive function calls and slower performance.
 
-### Challenge 5: Find Prime Numbers in a Range   
+### Challenge 6: Find Prime Numbers in a Range   
 **Question:**
 
  Create a PHP function that finds all prime numbers in a given range and displays them. 
 
 
- function PrimeNumbers($start, $end) {
-  $primeNumbers = [];
+    function PrimeNumbers($start, $end) {
+    $primeNumbers = [];
 
-  for ($number = $start; $number <= $end; $number++) {
-    $isPrime = true;
+    for ($number = $start; $number <= $end; $number++) {
+        $isPrime = true;
 
     if ($number <= 1) {
       $isPrime = false;
@@ -103,11 +103,30 @@ When generating a Fibonacci sequence, iteration is usually more efficient than r
       }
     }
 
-    if ($isPrime) {
-      $primeNumbers[] = $number;
+      if ($isPrime) {
+        $primeNumbers[] = $number;
+      }
     }
-  }
 
-  return $primeNumbers;
-}
+        return $primeNumbers;
+    }
+
+
+### Challenge 7: Palindrome Check
+**Question:** 
+
+Implement a PHP function that checks if a given string is a palindrome (reads the same forwards and backwards) while ignoring spaces, punctuation, and capitalization. 
+
+**Answer:**
+
+    function isPalindrome($str) {
+        // Remove spaces, punctuation, and convert to lowercase
+            $clean = strtolower(preg_replace("/[^A-Za-z0-9]/", "", $str));
+
+        // Reverse the string
+        $reversed = strrev($clean);
+
+        // Check if the reversed string is equal to the original string
+        return $clean === $reversed;
+    }
 
