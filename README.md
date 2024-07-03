@@ -85,17 +85,25 @@ When generating a Fibonacci sequence, iteration is usually more efficient than r
 
  Create a PHP function that finds all prime numbers in a given range and displays them. 
 
-
+ **Answer:**
+ 
     function PrimeNumbers($start, $end) {
-    $primeNumbers = [];
+    //Initialize an empty array to store the prime numbers   
 
+    $primeNumbers = [];
+    // Iterate through each number from $start to $end
     for ($number = $start; $number <= $end; $number++) {
         $isPrime = true;
 
+    // Check if the number is less than or equal to 1
+    // If so, it is not a prime number
     if ($number <= 1) {
       $isPrime = false;
     }
-    
+
+
+    // Check if the number is divisible by any number from 2 to sqrt($number)
+    // If it is, then it is not a prime number
     for ($i = 2; $i <= sqrt($number); $i++) {
       if ($number % $i == 0) {
         $isPrime = false;
@@ -103,14 +111,13 @@ When generating a Fibonacci sequence, iteration is usually more efficient than r
       }
     }
 
-      if ($isPrime) {
-        $primeNumbers[] = $number;
-      }
+    // If the number is prime, add it to the $primeNumbers array
+    if ($isPrime) {
+      $primeNumbers[] = $number;
     }
-
-        return $primeNumbers;
     }
-
+    return $primeNumbers;
+    }
 
 ### Challenge 7: Palindrome Check
 **Question:** 
